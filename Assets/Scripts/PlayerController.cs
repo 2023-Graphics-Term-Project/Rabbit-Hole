@@ -18,8 +18,8 @@ public class PlayerController : MonoBehaviour
     {
         float xInput = Input.GetAxis("Horizontal");
         float xSpeed = xInput * speed;
-        Vector3 newVelocity = new Vector3(xSpeed, playerRigidbody.velocity[1], 0f);
+        
 
-        playerRigidbody.velocity = newVelocity;
+        playerRigidbody.AddForce(xSpeed, 0, 0);
     }
 }
