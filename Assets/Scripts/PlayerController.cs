@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody playerRigidbody;
-    public float speed = 8f;
+    public float speed;
 
     // Start is called before the first frame update
     void Start()
@@ -16,10 +17,26 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float xInput = Input.GetAxis("Horizontal");
-        float xSpeed = xInput * speed;
-        
+        float x = playerRigidbody.velocity.x;
+        float y = playerRigidbody.velocity.y;
+        float z = playerRigidbody.velocity.z;
+        float maxSpeed = 2f;
 
-        playerRigidbody.AddForce(xSpeed, 0, 0);
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            transform.rotation = Quaternion.Euler(0, 90, 0);
+            if (Mathf.Abs(x) <= maxSpeed)
+            {
+                playerRigidbody.AddForce(speed, 0, 0);
+            }
+        }
+        else if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            transform.rotation = Quaternion.Euler(0, -90, 0);
+            if (Mathf.Abs(x) <= maxSpeed)
+            {
+                playerRigidbody.AddForce(-speed, 0, 0);
+            }
+        }
     }
 }
