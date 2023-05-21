@@ -5801,5 +5801,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: RockBall
       objectReference: {fileID: 0}
+    - target: {fileID: 1090391636709200902, guid: ddd93f2bbf03f419b93dddcbdc245fa8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 074507b0918254f7e9a94af71cf93535, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddd93f2bbf03f419b93dddcbdc245fa8, type: 3}
