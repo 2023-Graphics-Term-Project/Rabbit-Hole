@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class GameStop : MonoBehaviour
 {
+    Animator animator;
     // Start is called before the first frame update
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -21,6 +22,10 @@ public class GameStop : MonoBehaviour
         if(trigger.tag == "CARROT")
         {
             Destroy(trigger.gameObject);
+        }
+        if(trigger.tag == "DEATH")
+        {
+            animator.SetTrigger("Dead");
         }
     }
 
