@@ -178,6 +178,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8061401941016634489, guid: 2aa61901e1d2c8749943ab3425a80c9b, type: 3}
+      propertyPath: speed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8061401941016634490, guid: 2aa61901e1d2c8749943ab3425a80c9b, type: 3}
+      propertyPath: m_Mass
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2aa61901e1d2c8749943ab3425a80c9b, type: 3}
 --- !u!1 &292752748
@@ -503,7 +511,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 062134dc740b8284a9ed54669473d916, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateSpeed: 0.2
+  rotateSpeed: 0.1
 --- !u!1001 &2140334598
 PrefabInstance:
   m_ObjectHideFlags: 0
