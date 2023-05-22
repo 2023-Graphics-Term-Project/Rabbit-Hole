@@ -3230,6 +3230,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+--- !u!114 &1182093875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182093865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4cb2f43f2a275846b98d4a96e096705, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1218356208
 GameObject:
   m_ObjectHideFlags: 0
@@ -4215,64 +4227,6 @@ Transform:
   m_Father: {fileID: 854739109}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 89.082}
---- !u!1 &1739149810
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1739149812}
-  - component: {fileID: 1739149811}
-  - component: {fileID: 1739149813}
-  m_Layer: 0
-  m_Name: PillarPassTrigger
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!65 &1739149811
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1739149810}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.1977137, y: 0.65789557, z: 1}
-  m_Center: {x: 0.09885687, y: -0.22509408, z: 0}
---- !u!4 &1739149812
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1739149810}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.07, y: 4.522, z: -0.027784912}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2096872695}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1739149813
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1739149810}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4cb2f43f2a275846b98d4a96e096705, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1749235352
 GameObject:
   m_ObjectHideFlags: 0
@@ -4286,6 +4240,7 @@ GameObject:
   - component: {fileID: 1749235355}
   - component: {fileID: 1749235354}
   - component: {fileID: 1749235357}
+  - component: {fileID: 1749235358}
   m_Layer: 0
   m_Name: IllusionPillar
   m_TagString: Untagged
@@ -4383,6 +4338,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31112213e466f8246bd98d0b519acff8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &1749235358
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749235352}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.038521484
+  m_Height: 1.1472521
+  m_Direction: 0
+  m_Center: {x: 0.0062503815, y: 0.3294359, z: -0.023935948}
 --- !u!1 &1893649966
 GameObject:
   m_ObjectHideFlags: 0
@@ -5097,7 +5066,6 @@ Transform:
   - {fileID: 1749235353}
   - {fileID: 854739109}
   - {fileID: 286888350}
-  - {fileID: 1739149812}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
