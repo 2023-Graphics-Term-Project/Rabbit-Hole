@@ -38,5 +38,9 @@ public class PlayerController : MonoBehaviour
                 playerRigidbody.AddForce(-speed, 0, 0);
             }
         }
+        else
+        {
+            playerRigidbody.AddForce(0.01f, 0, 0);
+        }
     }
 }
