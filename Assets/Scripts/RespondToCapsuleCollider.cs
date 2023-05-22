@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BoxColliderTrigger : MonoBehaviour
+public class RespondToCapsuleCollider : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -22,12 +22,18 @@ public class BoxColliderTrigger : MonoBehaviour
         string hierarchyPath = GetGameObjectPath(other.gameObject);
         Debug.Log("Player is OnTriggerEnter: " + hierarchyPath);
 
-        GameObject collidingObject = GameObject.Find(hierarchyPath);
-
-        if (collidingObject != null)
+        if (other.GetType() == typeof(CapsuleCollider))
         {
-            BoxColliderController colliderController = collidingObject.GetComponent<BoxColliderController>();
-            colliderController.Deactivate();
+            GameObject collidingObject = GameObject.Find(hierarchyPath);
+            if (collidingObject != null)
+            {
+                BoxColliderController colliderController = collidingObject.GetComponent<BoxColliderController>();
+                colliderController.Deactivate();
+            }
+            else
+            {
+                Debug.Log("collidingObject == null Error");
+            }
         }
     }
 
@@ -36,12 +42,18 @@ public class BoxColliderTrigger : MonoBehaviour
         string hierarchyPath = GetGameObjectPath(other.gameObject);
         Debug.Log("Player is OnTriggerExit: " + hierarchyPath);
 
-        GameObject collidingObject = GameObject.Find(hierarchyPath);
-
-        if (collidingObject != null)
+        if (other.GetType() == typeof(CapsuleCollider))
         {
-            BoxColliderController colliderController = collidingObject.GetComponent<BoxColliderController>();
-            colliderController.Activate();
+            GameObject collidingObject = GameObject.Find(hierarchyPath);
+            if (collidingObject != null)
+            {
+                BoxColliderController colliderController = collidingObject.GetComponent<BoxColliderController>();
+                colliderController.Activate();
+            }
+            else
+            {
+                Debug.Log("collidingObject == null Error");
+            }
         }
     }
 

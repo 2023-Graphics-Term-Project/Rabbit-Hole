@@ -18,7 +18,8 @@ public class BoxColliderController : MonoBehaviour
 
     public void Activate()
     {
-        Collider collider = GetComponent<BoxCollider>();
+        Debug.Log("Activate()");
+        BoxCollider collider = GetComponent<BoxCollider>();
         if (collider != null)
         {
             collider.enabled = true;
@@ -27,7 +28,8 @@ public class BoxColliderController : MonoBehaviour
 
     public void Deactivate()
     {
-        Collider collider = GetComponent<BoxCollider>();
+        Debug.Log("Dectivate()");
+        BoxCollider collider = GetComponent<BoxCollider>();
         if (collider != null)
         {
             collider.enabled = false;
