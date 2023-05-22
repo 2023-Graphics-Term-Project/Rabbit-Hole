@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ColliderTrigger : MonoBehaviour
+public class BoxColliderTrigger : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -26,7 +26,7 @@ public class ColliderTrigger : MonoBehaviour
 
         if (collidingObject != null)
         {
-            ColliderController colliderController = collidingObject.GetComponent<ColliderController>();
+            BoxColliderController colliderController = collidingObject.GetComponent<BoxColliderController>();
             colliderController.Deactivate();
         }
     }
@@ -40,7 +40,7 @@ public class ColliderTrigger : MonoBehaviour
 
         if (collidingObject != null)
         {
-            ColliderController colliderController = collidingObject.GetComponent<ColliderController>();
+            BoxColliderController colliderController = collidingObject.GetComponent<BoxColliderController>();
             colliderController.Activate();
         }
     }
