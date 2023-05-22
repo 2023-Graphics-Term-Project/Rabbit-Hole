@@ -4,18 +4,16 @@ using UnityEngine;
 
 public class RabbitMove : MonoBehaviour
 {
-    CharacterController controller;
+    private Rigidbody playerRigidbody;
     new Transform transform;
     Animator animator;
 
     public float moveSpeed = 0.2f;
-    float yVelocity = 0;
-    float gravity = -0.0002f;
-
+    
     // Start is called before the first frame update
     void Start()
     {
-        controller = GetComponent<CharacterController>();
+        playerRigidbody = GetComponent<Rigidbody>();
         transform = GetComponent<Transform>();
         animator = GetComponent<Animator>();
     }
@@ -29,21 +27,10 @@ public class RabbitMove : MonoBehaviour
     }
 
     float h => Input.GetAxis("Horizontal");
-    float v => Input.GetAxis("Vertical");
 
     void Move()
     {
-        Vector3 moveDir = new Vector3(0.0f, 0.0f, 0.0f); // controller.transform.position;
-
-        yVelocity += gravity * Time.deltaTime;
-        moveDir.y = yVelocity;
-        moveDir.x = h * moveSpeed * Time.deltaTime;
-
-        if(controller.isGrounded) {
-            yVelocity = 0;
-        }
-
-        controller.Move(moveDir);
+        playerRigidbody.AddForce(moveSpeed, 0, 0);
     }
 
     Vector3 turnAngle = new Vector3(0.0f, 180f, 0.0f);
