@@ -5,60 +5,42 @@ using UnityEngine;
 public class RabbitMove : MonoBehaviour
 {
     private Rigidbody playerRigidbody;
-    new Transform transform;
-    Animator animator;
 
-    public float moveSpeed = 0.2f;
+    public float moveSpeed;
     
     // Start is called before the first frame update
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody>();
-        transform = GetComponent<Transform>();
-        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Move();
-        Turn();
-        Animate();
-    }
+        float x = playerRigidbody.velocity.x;
+        float maxSpeed = 1.5f;
 
-    float h => Input.GetAxis("Horizontal");
+        float xInput = Input.GetAxis("Horizontal");
 
-    void Move()
-    {
-        playerRigidbody.AddForce(moveSpeed, 0, 0);
-    }
-
-    Vector3 turnAngle = new Vector3(0.0f, 180f, 0.0f);
-    bool isLeft = false;
-
-    void Turn()
-    {
-        if (h > 0 && isLeft)
+        if (xInput > 0)
         {
-            transform.Rotate(turnAngle);
-            isLeft = false;
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+            if (Mathf.Abs(x) <= maxSpeed)
+            {
+                playerRigidbody.AddForce(xInput * moveSpeed, 0, 0);
+            }
         }
-        else if (h < 0 && !isLeft) 
+        else if (xInput < 0)
         {
-            transform.Rotate(turnAngle);
-            isLeft = true;
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+            if (Mathf.Abs(x) <= maxSpeed)
+            {
+                playerRigidbody.AddForce(xInput * moveSpeed, 0, 0);
+            }
+        }
+        else
+        {
+            playerRigidbody.AddForce(0.01f, 0, 0);
         }
     }
-
-    void Animate()
-    {
-        if(Input.GetButton("Horizontal"))
-        {
-            animator.SetTrigger("IdleToRun");
-        } 
-        else {
-            animator.SetTrigger("RunToIdle");    
-        }
-    }
-
 }
