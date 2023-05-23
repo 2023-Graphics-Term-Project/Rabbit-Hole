@@ -18,7 +18,7 @@ public class RabbitMove : MonoBehaviour
     void Update()
     {
         float x = playerRigidbody.velocity.x;
-        float maxSpeed = 1.0f;
+        float maxSpeed = 1.5f;
 
         float xInput = Input.GetAxis("Horizontal");
 
