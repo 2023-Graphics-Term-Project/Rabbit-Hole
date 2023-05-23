@@ -8,7 +8,7 @@ public class GameStop : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        animator = GetComponent<Animator>();
+        animator = GameObject.FindWithTag("Player").GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -19,11 +19,17 @@ public class GameStop : MonoBehaviour
 
     private void OnTriggerEnter(Collider trigger)
     {
+        print(trigger.tag);
         if(trigger.tag == "CARROT")
         {
             Destroy(trigger.gameObject);
         }
-        if(trigger.tag == "DEATH")
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        print(collision.collider.tag);
+        if(collision.collider.CompareTag("DEATH"))
         {
             animator.SetTrigger("Dead");
         }
