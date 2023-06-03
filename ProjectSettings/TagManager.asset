@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CARROT
   - DEATH
+  - Hole
   layers:
   - Default
   - TransparentFX
