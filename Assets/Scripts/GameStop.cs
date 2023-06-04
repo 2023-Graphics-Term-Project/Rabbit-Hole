@@ -19,16 +19,6 @@ public class GameStop : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider trigger)
-    {
-        print(trigger.tag);
-        if(trigger.tag == "CARROT")
-        {
-            AudioManager.Instance.PlaySFX("GetCarrot");
-            Destroy(trigger.gameObject);
-        }
-    }
-
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.collider.CompareTag("DEATH") && !isGameEnd)
