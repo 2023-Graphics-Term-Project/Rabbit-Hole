@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameStop : MonoBehaviour
 {
     Animator animator;
     public bool isGameEnd = false;
+    public GameObject Gameoverset;
 
     // Start is called before the first frame update
     void Start()

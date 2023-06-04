@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameScenesMove : MonoBehaviour
+public class GameSceneMove : MonoBehaviour
 {
     public void GameScenesCtrl(){
 
