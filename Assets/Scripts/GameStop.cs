@@ -5,6 +5,8 @@ using UnityEngine;
 public class GameStop : MonoBehaviour
 {
     Animator animator;
+    public bool isGameEnd = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,10 +30,16 @@ public class GameStop : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        print(collision.collider.tag);
-        if(collision.collider.CompareTag("DEATH"))
+        if(collision.collider.CompareTag("DEATH") && !isGameEnd)
         {
+            isGameEnd = true;
+            
             animator.SetTrigger("Dead");
+            
+            AudioManager.Instance.PauseBG();
+            AudioManager.Instance.PauseMusic();
+            AudioManager.Instance.PlaySFX("Death");
+
             CameraZoom cameraZoom = Camera.main.GetComponent<CameraZoom>();
             if (cameraZoom != null)
             {
