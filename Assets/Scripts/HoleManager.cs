@@ -33,6 +33,8 @@ public class HoleManager : MonoBehaviour
             return;
         }
 
+        AudioManager.Instance.PlaySFX("EnterHole");
+        
         if (SceneManager.GetActiveScene().name == "Map1")
         {
             SceneManager.LoadScene("Map2");

@@ -7,6 +7,8 @@ TagManager:
   - CARROT
   - DEATH
   - Hole
+  - RabbitAnimator
+  - Map
   layers:
   - Default
   - TransparentFX

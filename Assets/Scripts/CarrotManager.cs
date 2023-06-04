@@ -22,6 +22,7 @@ public class CarrotManager : MonoBehaviour
         {
             GameObject.FindGameObjectWithTag("Hole").GetComponent<HoleManager>().playerHasCarrot = true;
             this.gameObject.SetActive(false);
+            AudioManager.Instance.PlaySFX("GetCarrot");
         }
     }
 }
