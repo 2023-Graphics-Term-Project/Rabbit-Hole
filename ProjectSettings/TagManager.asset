@@ -8,6 +8,7 @@ TagManager:
   - DEATH
   - Hole
   - RabbitAnimator
+  - Map
   layers:
   - Default
   - TransparentFX
