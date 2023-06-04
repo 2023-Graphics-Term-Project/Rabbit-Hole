@@ -32,6 +32,11 @@ public class GameStop : MonoBehaviour
         if(collision.collider.CompareTag("DEATH"))
         {
             animator.SetTrigger("Dead");
+            CameraZoom cameraZoom = Camera.main.GetComponent<CameraZoom>();
+            if (cameraZoom != null)
+            {
+                cameraZoom.StartZoom();
+            }
         }
     }
 

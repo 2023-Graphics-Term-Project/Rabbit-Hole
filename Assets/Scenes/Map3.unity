@@ -3199,6 +3199,7 @@ GameObject:
   - component: {fileID: 1307587739}
   - component: {fileID: 1307587738}
   - component: {fileID: 1307587737}
+  - component: {fileID: 1307587740}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3237,7 +3238,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: -10
   far clip plane: 1000
   field of view: 70
   orthographic: 1
@@ -3272,6 +3273,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 20, y: 7, z: 0}
+--- !u!114 &1307587740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1307587736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcdad139499f24d01ab07e0babcebc15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 1307587738}
+  zoomTarget: {fileID: 1761017937}
+  minZoom: 2
+  maxZoom: 8
 --- !u!1001 &1334531207
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4463,7 +4480,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3002008157640458163, guid: c3de35a6785d1534c8c3a9f7dfb3f1bb, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 3002008157640458173, guid: c3de35a6785d1534c8c3a9f7dfb3f1bb, type: 3}
       propertyPath: m_RootOrder
@@ -4471,11 +4488,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3002008157640458173, guid: c3de35a6785d1534c8c3a9f7dfb3f1bb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.4
+      value: -4.93
       objectReference: {fileID: 0}
     - target: {fileID: 3002008157640458173, guid: c3de35a6785d1534c8c3a9f7dfb3f1bb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.06
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 3002008157640458173, guid: c3de35a6785d1534c8c3a9f7dfb3f1bb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4511,7 +4528,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3003024502799720671, guid: c3de35a6785d1534c8c3a9f7dfb3f1bb, type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: RabbitAnimator
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3de35a6785d1534c8c3a9f7dfb3f1bb, type: 3}
@@ -4532,6 +4549,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f29392fd633c418e8e2b6b767b20ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1761017937 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3002008157640458173, guid: c3de35a6785d1534c8c3a9f7dfb3f1bb, type: 3}
+  m_PrefabInstance: {fileID: 1761017926}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1766113982
 GameObject:
   m_ObjectHideFlags: 0
