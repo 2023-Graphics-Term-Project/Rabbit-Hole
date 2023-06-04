@@ -24,6 +24,7 @@ public class GameStop : MonoBehaviour
         print(trigger.tag);
         if(trigger.tag == "CARROT")
         {
+            AudioManager.Instance.PlaySFX("GetCarrot");
             Destroy(trigger.gameObject);
         }
     }
