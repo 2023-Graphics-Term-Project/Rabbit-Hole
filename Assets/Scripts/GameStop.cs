@@ -8,7 +8,7 @@ public class GameStop : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        animator = GameObject.FindWithTag("Player").GetComponent<Animator>();
+        animator = GameObject.FindWithTag("RabbitAnimator").GetComponent<Animator>();
     }
 
     // Update is called once per frame
