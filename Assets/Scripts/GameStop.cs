@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameStop : MonoBehaviour
 {
     Animator animator;
     public bool isGameEnd = false;
-    public GameObject Gameoverset;
+    public GameObject GameOver;
 
     // Start is called before the first frame update
     void Start()
@@ -39,8 +40,21 @@ public class GameStop : MonoBehaviour
             {
                 cameraZoom.StartZoom();
             }
-            Gameoverset.SetActive(true);
+            GameOver.SetActive(true);
         }
+    }
+
+    public void Restartmap(){
+        Debug.Log("click");
+        SceneManager.LoadScene("Map3");
+        GameOver.SetActive(false);
+        isGameEnd = false;
+        // animator.SetTrigger("RabbitAnimator");
+        
+    }
+    public void GameExit(){
+        Application.Quit();
+        Debug.Log("click");
     }
 
 }

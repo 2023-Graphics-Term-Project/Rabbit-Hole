@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameSceneMove : MonoBehaviour
+public class RestartMap3 : MonoBehaviour
 {
-    public void GameScenesCtrl(){
+    public GameObject Gameoverset;
 
-        SceneManager.LoadScene("Map1");
+    public void Restartmap(){
+        SceneManager.LoadScene("Map3");
+        Gameoverset.SetActive(false);
         Debug.Log("click");
     }
     public void GameExit(){
-
         Application.Quit();
     }
     // Start is called before the first frame update
