@@ -18,6 +18,7 @@ public class GameStop : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
         
     }
 
@@ -38,6 +39,7 @@ public class GameStop : MonoBehaviour
             {
                 cameraZoom.StartZoom();
             }
+            Gameoverset.SetActive(true);
         }
     }
 
