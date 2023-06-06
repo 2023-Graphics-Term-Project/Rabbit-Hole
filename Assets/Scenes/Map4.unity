@@ -865,7 +865,7 @@ GameObject:
   - component: {fileID: 142783245}
   - component: {fileID: 142783244}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Map4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9644,7 +9644,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGameEnd: 0
-  GameOver: {fileID: 0}
+  GameOver: {fileID: 1139734044}
 --- !u!4 &2129170798 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3002008157640458173, guid: c3de35a6785d1534c8c3a9f7dfb3f1bb, type: 3}
