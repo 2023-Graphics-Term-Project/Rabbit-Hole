@@ -43,18 +43,4 @@ public class GameStop : MonoBehaviour
             GameOver.SetActive(true);
         }
     }
-
-    public void Restartmap(){
-        Debug.Log("click");
-        SceneManager.LoadScene("Map3");
-        GameOver.SetActive(false);
-        isGameEnd = false;
-        // animator.SetTrigger("RabbitAnimator");
-        
-    }
-    public void GameExit(){
-        Application.Quit();
-        Debug.Log("click");
-    }
-
 }
