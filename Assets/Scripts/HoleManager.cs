@@ -43,5 +43,12 @@ public class HoleManager : MonoBehaviour
         {
             SceneManager.LoadScene("Map3");
         }
+        else if(SceneManager.GetActiveScene().name == "Map3"){
+            SceneManager.LoadScene("Map4");
+        }
+        else if(SceneManager.GetActiveScene().name == "Map4"){
+            SceneManager.LoadScene("EndScene");
+        }
+    
     }
 }
