@@ -24,6 +24,8 @@ public class EventManager : MonoBehaviour
         Debug.Log("Restart Click");
         gameObject.transform.parent.gameObject.SetActive(false);
 
+        AudioManager.Instance.PlayMusic("Theme");
+        
         string currentSceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(currentSceneName);
     }
@@ -31,5 +33,7 @@ public class EventManager : MonoBehaviour
     public void ExitClick()
     {
         Debug.Log("Exit Click");
+
+        Application.Quit();
     }
 }
