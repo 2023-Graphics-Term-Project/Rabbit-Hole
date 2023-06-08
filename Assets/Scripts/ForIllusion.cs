@@ -22,8 +22,6 @@ public class ForIllusion : MonoBehaviour
             levelAngle -= 180;
         Debug.Log(levelAngle);
 
-        //0, 180에서 이 오브젝트의 rotation.eulerAngles.x는 20
-        //90, 270에서 0을 찍고 그 사이를 부드럽게 움직임
         float thr1 = 20f;
         float thr2 = 160f;
 
