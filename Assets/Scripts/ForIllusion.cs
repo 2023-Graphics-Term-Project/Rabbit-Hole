@@ -6,11 +6,10 @@ public class ForIllusion : MonoBehaviour
 {
     public GameObject levelObject;
 
-    private float initialPosY;
     // Start is called before the first frame update
     void Start()
     {
-        initialPosY = transform.position.y;
+
     }
 
     // Update is called once per frame
@@ -22,6 +21,7 @@ public class ForIllusion : MonoBehaviour
             levelAngle -= 180;
         Debug.Log(levelAngle);
 
+        //카메라 x축 회전
         float thr1 = 20f;
         float thr2 = 160f;
 
@@ -45,5 +45,27 @@ public class ForIllusion : MonoBehaviour
 
             transform.rotation = Quaternion.Euler(10 * value, 0, 0);
         }
+
+        //카메라 축 회전
+        float thr11 = 70f;
+        float thr22 = 110f;
+
+        if (thr11 <= levelAngle && levelAngle < 90)
+        {
+            float proportion = (levelAngle - thr11) / (90 - thr11);
+            float anglePoint = 180 * proportion;
+            float value = - Mathf.Cos(anglePoint * Mathf.Deg2Rad) + 1;
+
+            transform.rotation = Quaternion.Euler(0, 10 * value, 0);
+        }
+        else if (90 <= levelAngle && levelAngle < thr22)
+        {
+            float proportion = (levelAngle - 90) / (thr22 - 90);
+            float anglePoint = 180 * proportion;
+            float value = Mathf.Cos(anglePoint * Mathf.Deg2Rad) + 1;
+
+            transform.rotation = Quaternion.Euler(0, 10 * value, 0);
+        }
+
     }
 }
