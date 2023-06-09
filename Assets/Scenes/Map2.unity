@@ -1470,7 +1470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 062134dc740b8284a9ed54669473d916, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateSpeed: 0.02
+  rotateSpeed: 0.1
 --- !u!4 &384789395 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4835789832631930, guid: bdf8e7438a7816543998181bd3067573, type: 3}
@@ -6809,7 +6809,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3002008157640458162, guid: c3de35a6785d1534c8c3a9f7dfb3f1bb, type: 3}
       propertyPath: moveSpeed
-      value: 20
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 3002008157640458163, guid: c3de35a6785d1534c8c3a9f7dfb3f1bb, type: 3}
       propertyPath: m_Name
