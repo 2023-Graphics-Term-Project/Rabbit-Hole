@@ -22,7 +22,6 @@ public class GameStop : MonoBehaviour
     void Update()
     {
        rabbitposition = RabbitWrapper.transform.position.y;
-        Debug.Log(RabbitWrapper.transform.position.y);
         
         if(rabbitposition < -10 && !isGameEnd){
             isGameEnd = true;
