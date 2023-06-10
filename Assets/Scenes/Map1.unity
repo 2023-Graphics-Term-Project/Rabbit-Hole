@@ -3461,7 +3461,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 769ee6fc98651564592ba4cfcc0b312a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateSpeed: 0.2
 --- !u!1 &611745812
 GameObject:
   m_ObjectHideFlags: 0
@@ -3561,7 +3560,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b223091a857901a418543cb8201221ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelObject: {fileID: 2096872694}
 --- !u!114 &611745817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12063,7 +12061,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 062134dc740b8284a9ed54669473d916, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateSpeed: 0.2
+  rotateSpeed: 0.3
 --- !u!1 &2099607092
 GameObject:
   m_ObjectHideFlags: 0
@@ -12526,6 +12524,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1840784630}
     m_Modifications:
+    - target: {fileID: 3002008157640458162, guid: c3de35a6785d1534c8c3a9f7dfb3f1bb, type: 3}
+      propertyPath: moveSpeed
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 3002008157640458163, guid: c3de35a6785d1534c8c3a9f7dfb3f1bb, type: 3}
       propertyPath: m_Name
       value: RabbitWrapper
